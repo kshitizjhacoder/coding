@@ -1,0 +1,7 @@
+import java.util.*;
+class Quicksort{
+	static int sorting(int a[],int low,int high)
+	{
+		
+	}
+}

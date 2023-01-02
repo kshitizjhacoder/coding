@@ -1,0 +1,12 @@
+import java.util.*;
+class Quicksort{
+	static int sorting(int a[],int low,int high)
+	{
+		if(low>high)
+		{
+			int k = partition(a,low,high);
+			sorting(a,low,k-1);
+			sorting(a,k+1,high);
+		}
+	}
+}

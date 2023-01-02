@@ -1,0 +1,64 @@
+import os
+os.path.abspath(".\\coding")
+'C:\\Users\\kshit\\AppData\\Local\\Programs\\Python\\Python311\\coding'
+os.path.relpath(".\\coding","C:\\")
+'Users\\kshit\\AppData\\Local\\Programs\\Python\\Python311\\coding'
+for foldername,subfolders,filenames in os.walk("C:\\Users"):
+    print(foldername)
+    for subfolder in subfolders:
+        print(foldername +" " +subfolder)
+    for filename in filenames:
+        print(foldername +" "+ filename)
+    print(" ")
+os.path.basename(".\\coding")
+'coding'
+os.path.dirname(".\\coding")
+'.'
+
+
+class Point:
+    pass
+
+
+p1 = Point()
+p1.x = 20
+p1.y = 30
+p2 = Point()
+p2.x = 35
+p2.y = 40
+p2.z = 28
+
+print(p1.x, p2.x)
+
+
+class Box:
+    def __init__(self, length, breadth, height):
+        self.length = length
+        self.breadth = breadth
+        self.height = height
+
+    def display(self):
+        print(self.length, self.breadth, self.height)
+
+    def vol(self):
+        print("Volume is ", self.length*self.breadth*self.height)
+
+
+b1 = Box(10, 20, 5)
+b1.display()
+b1.vol()
+
+class Student:
+    def __init__(self, name, usn, sem, branch, cgpa):
+        self.name = name
+        self.usn = usn
+        self.sem = sem
+        self.branch = branch
+        self.cgpa = cgpa
+
+    def display(self):
+        print(self.name, self.usn, self.sem, self.branch, self.cgpa)
+
+
+s1 = Student("name", "123", "V b", "cse", 8.9)
+s1.display()
